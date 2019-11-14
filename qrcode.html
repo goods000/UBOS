@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+    <script type="text/javascript" src="js/public.js" ></script>
+    <script src="js/clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="layer/layer.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<style>
+	.screen-right .container{padding: 0px !important;}
+	.h1{background: none;border-bottom: none;}
+	.h1,.h1 button{color: #fff;}
+</style>
+<body style="width: 100vw;">
+	<div class="charge1">
+		<h1 class="h1"><button class="iconfont icon-xiangzuo1" onclick="javascript:window.history.back(-1);"></button>邀请推广</h1>
+		<div class="charge_bbj1">
+		<div  class="recharge" style="width: 35%;padding:4% 4px;border-radius: 20px;margin: auto;background: rgba(255,255,255,0.2);"></div>
+	</div>
+	<div class="chas_lianjie">
+		<p>我的邀请码</p>
+		<p id="v_code">5565454</p>
+	</div>
+	<div type="button" class="qr_an" data-clipboard-target="#v_code">复制推广链接</div>	
+</body>
+<script src="js/jquery.qrcode.min.js"></script>
+
+<script type="text/javascript">
+
+    jQuery('.recharge').qrcode({
+        render: "canvas", //也可以替换为table
+        width: 80,
+        height: 80,
+        text: "{$address}"
+    });
+
+    $('canvas').css({
+        'width': '80%',
+        'display': 'block',
+        'margin': 'auto',
+        'position':'relative',
+        'top':'0vh',
+        'padding':'10px',
+        'background': '#E5D1B4',
+    });
+
+	var clipboard=new Clipboard(".qr_an");
+	clipboard.on("success",function(e){
+		layer.msg("复制成功",{ icon: 1,time: 2000});
+	})
+</script>
+</html>

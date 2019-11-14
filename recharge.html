@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    <script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="layer/layer.js" ></script>
+</head>
+<style>
+</style>
+<body style="width: 100vw;">
+	<h1 class="h1 di"><button class="iconfont icon-xiangzuo1" onclick="javascript:window.history.back(-1);"></button>充币<a href="recharge_record.html">充币记录</a></h1>
+	<div class="charge">	
+		<div class="qr"></div>
+		<p class="title">充币地址</p>
+		<div class="chas_lianjie">
+			<textarea id="v_add" readonly="readonly">d2321Cp17CzeSjy5SSevquS31232evqdfa4444452u</textarea>
+		</div>
+		<p class="qr_btn"  data-clipboard-target="#v_add"><img src="img/qr_code.png" class="qr_code"/>复制地址链接</p>		
+		
+		<div class="title_box">
+			<p class="zil"><img src="img/tips.png" class="qr_code"/>充值注意事项:</p>
+			<div>
+				1.USDT钱包禁止充值任何除USDT之外的其他资源，非USDT资产充值将不可找回，请确认所充数字币，以免发生不必要的损失。
+			</div>
+			<div>
+				2.请务必确定网络安全，防止信息的泄露或更改。
+			</div>
+
+		</div>
+		
+	</div>
+<script src="js/clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.qrcode.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+
+    jQuery('.qr').qrcode({
+        render: "canvas", //也可以替换为table
+        width: 80,
+        height: 80,
+        text: "{$address}"
+    });
+
+    $('canvas').css({
+        'width': '60%',
+        'display': 'block',
+        'margin': 'auto',
+        'position':'relative',
+        'top':'2vh',
+        'padding': '10px',
+        'background': '#fff',
+        'border-radius': '10px',
+    });
+	var clipboard=new Clipboard(".qr_btn");
+		clipboard.on("success",function(e){
+			layer.msg("复制成功",{ icon: 1,time: 2000});
+	})
+</script>
+	
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	    <title></title>
+	    <link rel="stylesheet" href="css/style.css" />
+	    <link rel="stylesheet" href="css/font.css" />
+	    <script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+	    <script type="text/javascript" src="layer/layer.js" ></script>
+	</head>
+	<body>
+		<h1 class="h1 di"><button class="iconfont icon-xiangzuo1" onclick="javascript:window.history.back(-1);"></button>锁仓</h1>
+		<form action="" method="post" class="form_lock">
+			<div class="bb">
+				<div class="with">
+					<p>锁仓数量</p>
+					<div class="with_box">
+						<img src="img/unm.png"/>
+						<input type="number" placeholder="请输入锁仓数量" name="" id="" value="" />
+					</div>
+				</div>
+				<div class="with">
+					<p>锁仓方式选择</p>
+					<div class="with_box">
+						<input class="radio_type" type="radio" name="type" id="radio1" checked="checked"/> 
+						<label for="radio1">UBOS锁仓</label>
+						<input class="radio_type" type="radio" name="type" id="radio2" /> 
+						<label for="radio2">UBOS+复投锁仓</label>
+					</div>
+				</div>
+			</div>
+			<div class="bb">
+				<div class="with">
+					<p>UBOS余额</p>
+					<input type="text" readonly="readonly" name="" id="" value="0.0000" />
+				</div>
+				<div class="with">
+					<p>交易密码</p>
+					<div class="with_box">
+						<img src="img/psd.png"/>
+						<input type="password" placeholder="请输入您的交易密码" name="" id="" value="" />
+					</div>
+				</div>
+			</div>
+			
+			<div class="e_btn">
+				<input type="button" id="sub" class="yzbutton" value="确认锁仓" />
+			</div>
+		</form>
+	</body>
+</html>
