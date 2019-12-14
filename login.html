@@ -39,7 +39,10 @@
 </body>
 <script src="js/check.js" type="text/javascript" charset="utf-8"></script>
 <script>
-	
+		$("input").on("blur",function(){
+	        var toFix=$(this).offset().top;
+	        window.scroll(0,toFix);//失焦后强制让页面归位
+	    });
 	
 		$(".tijiao").click(function(){
 			var mobile=$(".mobile").val();
