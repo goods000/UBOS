@@ -222,7 +222,7 @@ display: inline-block;width: 40%;padding: 8px 0;border-radius: 5px;white-space: 
 .getCode{padding: 0% !important;width: 30% !important;color: #E69F20 !important;position: absolute;right: 0px;}
 
 /*资金明细*/   
-.record{background:#1A242D;text-align: center;margin-bottom: 10px;}
+.record{background:#1A242D;margin-bottom: 10px;}
 .record .num_box{margin: 20px 0;display: inline-block;} 
 .record .num_box .num{text-align: center;color: #fff;margin-bottom: 10px;} 
 .re i{margin-top: 5px !important;}
